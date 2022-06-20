@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+body {
+  background-color: "#F9F9F9";
+  font-family: "Lato", sans-serif;
+}
+
+.Card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+  position: relative;
+}
+.Card-img {
+  width: 100%;
+  height: 50%;
+}
+.Card-img:hover {
+  filter: blur(2px);
+}
+.Card-section {
+  padding: 20px 20px;
+}
+.Card-content {
+  font-size: 1rem;
+  color: #a9b4bc;
+}
+
+.SubCard {
+  display: flex;
+  justify-content: space-between;
+}
+.SubCard-name {
+  font-size: 1rem;
+  color: #a9b4bc;
+}
+.SubCard-date {
+  font-size: 1rem;
+  color: #a9b4bc;
+}
+
+.button {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.35s ease;
+}
+
+.Card:hover .button {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hoverbtn {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #ffff;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 10px 80px;
+}
+@media (max-width: 800px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Modal {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #ffff;
+}
+.Modal-img {
+  width: 100%;
+  height: 50%;
+  margin: 30px 0 0 0;
+}
+@media (max-width: 600px) {
+  .Modal-img {
+    height: 30%;
+    margin: 10px 0 0 0;
+  }
+}
+.Modal-avatar {
+  width: 10%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+@media (max-width: 800px) {
+  .Modal-avatar {
+    height: 20%;
+    width: 20%;
+  }
+}
+.Modal-container {
+  padding: 20px;
+}
+.Modal-closebtn {
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 2px;
+  font-size: 1.6rem;
+  background-color: transparent;
+}
+.Modal-para {
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .Modal-para {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 800px) {
+  .Modal-name {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .Modal-title {
+    font-size: 1.6rem;
+  }
+}
+
+.Modalfooter {
+  display: flex;
+}
